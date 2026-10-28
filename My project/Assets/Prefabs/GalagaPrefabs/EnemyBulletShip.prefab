@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3682240577257181919}
   m_Layer: 0
   m_Name: EnemyBulletShip
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletShip
   speed: 1
   bullet: {fileID: 3531861156144288367, guid: bd2c11f643a52417d9eec6e4bfc4c85e, type: 3}
+  explosion: {fileID: 8292263033576175372, guid: 62330d609983a452daaa7a42ed2c3ec9, type: 3}
   bulletTimer: 0
   bulletwait: 2
 --- !u!61 &336861391877874401

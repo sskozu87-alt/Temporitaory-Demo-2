@@ -1,3 +1,4 @@
+using System.Data.Common;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ public class BulletShip : MonoBehaviour
 {
    public float speed = 3;
    public GameObject bullet; 
+   public GameObject explosion;
 
    public float bulletTimer = 0, bulletwait = 3;
 
@@ -27,10 +29,14 @@ public class BulletShip : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("PlayerBullet"))
+        if(collision.gameObject.CompareTag("PlayerBullet") || collision.gameObject.CompareTag("GalagaPlayer"))
         {
+          if (collision.gameObject.CompareTag("PlayerBullet"))
             Destroy(collision.gameObject);
-            Destroy(gameObject);
+            
+         GameObject temp = Instantiate(explosion, transform.position, Quaternion.identity);
+         Destroy(temp, 1.0f);
+         Destroy(gameObject);
         }
     }
 }
