@@ -28,16 +28,7 @@ public class SeaKingShip : MonoBehaviour
       
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("PlayerBullet"))
-        {
-            Destroy(collision.gameObject);
-            GameObject temp = Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(temp, 1.0f);
-            Destroy(gameObject);
-        }
-    }
+    
 }
     
     

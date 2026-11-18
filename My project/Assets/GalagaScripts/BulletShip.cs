@@ -34,9 +34,9 @@ public class BulletShip : MonoBehaviour
           if (collision.gameObject.CompareTag("PlayerBullet"))
             Destroy(collision.gameObject);
             
-         GameObject temp = Instantiate(explosion, transform.position, Quaternion.identity);
-         Destroy(temp, 1.0f);
-         Destroy(gameObject);
+            GameObject temp = Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(temp, 1.0f);
+            Destroy(gameObject);
         }
     }
 }
